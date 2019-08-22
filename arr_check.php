@@ -17,16 +17,6 @@
 //   }
 // ] => false
 
-function arr_check(array $a): bool {
-  return count($a) === count(array_filter($a, 'is_array'));
-}
-
-// Alternative Solution:
-// function arr_check(array $a): bool {
-//   foreach($a as $value) {
-//     if (!is_array($value)) return false;
-//   }
-//   return true;
-// }
+function arr_check(): bool {
 
 ?>

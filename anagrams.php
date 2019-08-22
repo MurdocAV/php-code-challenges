@@ -15,39 +15,6 @@
 //
 // anagrams('laser', ['lazing', 'lazy',  'lacer']); // => []
 
-function anagrams(string $word, array $words): array {
-    $sorted = function($word) { $a = str_split($word); sort($a); return implode($a);};
-    $match = $sorted($word);
-    $result = [];
-    foreach($words as $w) {
-        $test = $sorted($w);
-        if ($test === $match) {
-          $result[] = $w ;
-        }
-    }
-    return $result;
-}
-
-// Alternative Solution:
-//
-// function anagrams(string $word, array $words): array {
-//     $sorted = function($word) { $a = str_split($word); sort($a); return implode($a);};
-//     $match = $sorted($word);
-//     return array_values(array_filter($words, function($w) use($match,$sorted){
-//       return $sorted($w) === $match;
-//     }));
-// }
-
-// function anagrams(string $word, array $words): array {
-// $char = count_chars($word, 1);
-// $res = [];
-//
-// foreach($words as $elem){
-//   if(count_chars($elem, 1) == $char){
-//     $res[] = $elem;
-//   }
-// }
-// return $res;
-// }
+function anagrams(): array {
 
 ?>
